@@ -24,4 +24,5 @@ No automated test framework or coverage requirement is configured. Manually veri
 
 ## Commit & Pull Request Guidelines
 
+
 Recent commits use short action-oriented subjects such as `add readme` and `Add header and page structure`. Keep each commit focused and use a concise imperative summary; add a scope when useful, for example `Fix mobile project navigation`. Pull requests should explain the visible change, list pages tested, link any relevant issue, and include before/after screenshots for layout or visual updates. Call out new external links or large assets explicitly.
