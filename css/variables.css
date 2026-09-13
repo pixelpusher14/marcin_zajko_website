@@ -1,0 +1,42 @@
+:root {
+  /* Colors */
+  --ink: #282a2d;
+  --muted: #62656a;
+  --line: #e7e7e8;
+  --surface: #f7f7f5;
+  --surface-hover: #eeeeeb;
+  --traficar: #7812ba;
+  --readme: #2663e8;
+  --white: #ffffff;
+  --black: #000000;
+  --scrollbar-track: #1b1c1e;
+  --scrollbar-thumb-hover: #85888d;
+  --contact-label: #76767f;
+  --footer-text: #a1a4aa;
+  --header-background: rgba(255, 255, 255, 0.96);
+  --text-on-color-muted: rgba(255, 255, 255, 0.78);
+
+   /* Fonts */
+  --font-family-sans: "Inter", Arial, sans-serif;
+
+  /* Repeated dimensions */
+  --size-1: 1px;
+  --size-3: 3px;
+  --size-4: 4px;
+  --size-12: 12px;
+  --size-14: 14px;
+  --size-16: 16px;
+  --size-18: 18px;
+  --size-20: 20px;
+  --size-24: 24px;
+  --size-28: 28px;
+  --size-32: 32px;
+  --size-40: 40px;
+  --size-48: 48px;
+  --size-64: 64px;
+  --size-96: 96px;
+  --size-112: 112px;
+  --size-120: 120px;
+  --size-560: 560px;
+  --content-width: 1120px;
+}
