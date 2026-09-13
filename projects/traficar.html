@@ -12,10 +12,17 @@
   <title>Traficar Case Study — Marcin Zajko</title>
 
   <link rel="icon" href="../assets/favicon/favicon.svg" type="image/svg+xml">
+  <link
+    rel="preload"
+    href="../assets/fonts/Inter-Variable.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 
-<body>
+<body class="case-study-page">
   <header class="site-header">
     <a class="site-logo" href="../index.html">Marcin Zajko</a>
 
@@ -40,22 +47,48 @@
 
   <main>
     <section class="case-study-hero case-study-hero--traficar">
+      <img
+        class="case-study-hero__decoration"
+        src="../assets/images/traficar/decoration_traficar.svg"
+        alt=""
+        width="285"
+        height="384"
+        aria-hidden="true"
+      >
+
       <div class="case-study-hero__content">
         <p>2022–2025</p>
-        <h1>Traficar</h1>
+        <h1>
+          <img
+            src="../assets/images/home/traficar_logo.svg"
+            alt="Traficar"
+            width="285"
+            height="61"
+          >
+        </h1>
 
         <ul class="project-details">
-          <li>Commercial project</li>
-          <li>Transport</li>
-          <li>Mobile app</li>
+          <li>
+            <img src="../assets/icons/icon_commercial.svg" alt="" width="24" height="24" aria-hidden="true">
+            <span>Commercial project</span>
+          </li>
+          <li>
+            <img src="../assets/icons/icon_transport.svg" alt="" width="24" height="24" aria-hidden="true">
+            <span>Transport</span>
+          </li>
+          <li>
+            <img src="../assets/icons/icon_mobile.svg" alt="" width="24" height="24" aria-hidden="true">
+            <span>Mobile app</span>
+          </li>
         </ul>
       </div>
 
       <img
-        src="../assets/images/home/mock_traficar.png"
+        class="case-study-hero__mockup"
+        src="../assets/images/traficar/traficar_mock.png"
         alt="Two screens from the Traficar mobile application"
-        width="449"
-        height="383"
+        width="639"
+        height="703"
       >
     </section>
 
@@ -92,8 +125,11 @@
 
     <nav class="project-navigation" aria-label="Project navigation">
       <a href="readme.html">
-        <span>ReadMe</span>
-        <strong>Next project →</strong>
+        <span class="project-navigation__project">ReadMe</span>
+        <span class="project-navigation__direction">
+          <img src="../assets/icons/icon_left.svg" alt="" width="24" height="24" aria-hidden="true">
+          Previous
+        </span>
       </a>
     </nav>
 

@@ -17,6 +17,13 @@
   type="image/svg+xml"
 >
 
+  <link
+    rel="preload"
+    href="assets/fonts/Inter-Variable.woff2"
+    as="font"
+    type="font/woff2"
+    crossorigin
+  >
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -89,13 +96,43 @@
       <article class="project-card project-card--traficar">
         <a href="projects/traficar.html">
           <div class="project-card__content">
-            <p>Transport</p>
-            <h2>Traficar</h2>
-            <p>2022–2025 · Commercial project</p>
+            <p class="project-card__badge">
+              <img
+                src="assets/icons/icon_transport.svg"
+                alt=""
+                width="16"
+                height="16"
+                aria-hidden="true"
+              >
+              <span>Transport</span>
+            </p>
+
+            <h2 class="project-card__title">
+              <img
+                class="project-card__logo"
+                src="assets/images/home/traficar_logo.svg"
+                alt="Traficar"
+                width="285"
+                height="61"
+              >
+            </h2>
+
+            <p class="project-card__meta">2022–2025 · Commercial project</p>
           </div>
 
           <div class="project-card__image">
             <img
+              class="project-card__background"
+              src="assets/images/home/bg_traficar.png"
+              alt=""
+              width="192"
+              height="258"
+              loading="lazy"
+              aria-hidden="true"
+            >
+
+            <img
+              class="project-card__mockup"
               src="assets/images/home/mock_traficar.png"
               alt="Preview of the Traficar mobile application"
               width="449"
@@ -109,13 +146,43 @@
       <article class="project-card project-card--readme">
         <a href="projects/readme.html">
           <div class="project-card__content">
-            <p>Utilities</p>
-            <h2>ReadMe</h2>
-            <p>2022 · Concept</p>
+            <p class="project-card__badge">
+              <img
+                src="assets/icons/icon_utilities.svg"
+                alt=""
+                width="16"
+                height="16"
+                aria-hidden="true"
+              >
+              <span>Utilities</span>
+            </p>
+
+            <h2 class="project-card__title">
+              <img
+                class="project-card__logo"
+                src="assets/images/home/readme_logo.svg"
+                alt="ReadMe"
+                width="305"
+                height="58"
+              >
+            </h2>
+
+            <p class="project-card__meta">2022 · Concept</p>
           </div>
 
           <div class="project-card__image">
             <img
+              class="project-card__background"
+              src="assets/images/home/bg_readme.png"
+              alt=""
+              width="799"
+              height="377"
+              loading="lazy"
+              aria-hidden="true"
+            >
+
+            <img
+              class="project-card__mockup"
               src="assets/images/home/mock_readme.png"
               alt="Preview of the ReadMe mobile application"
               width="467"

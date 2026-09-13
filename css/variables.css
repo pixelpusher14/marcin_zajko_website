@@ -5,8 +5,10 @@
   --line: #e7e7e8;
   --surface: #f7f7f5;
   --surface-hover: #eeeeeb;
-  --traficar: #7812ba;
-  --readme: #2663e8;
+  --traficar: #7014ad;
+  --readme: #2361e9;
+  --project-navigation: #080c13;
+  --project-navigation-hover: #ffffff;
   --white: #ffffff;
   --black: #000000;
   --scrollbar-track: #1b1c1e;
@@ -15,6 +17,9 @@
   --footer-text: #a1a4aa;
   --header-background: rgba(255, 255, 255, 0.96);
   --text-on-color-muted: rgba(255, 255, 255, 0.78);
+  --line-on-color: rgba(234, 234, 235, 0.2);
+  --text-on-color: #eaeaeb;
+  --project-card-meta: rgba(255, 255, 255, 0.5);
 
    /* Fonts */
   --font-family-sans: "Inter", Arial, sans-serif;
