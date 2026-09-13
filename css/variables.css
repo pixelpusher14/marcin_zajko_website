@@ -21,8 +21,12 @@
   --text-on-color: #eaeaeb;
   --project-card-meta: rgba(255, 255, 255, 0.5);
 
-   /* Fonts */
-  --font-family-sans: "Inter", Arial, sans-serif;
+  /* Typography */
+  --font-family-sans: "Inter", system-ui, sans-serif;
+  --font-weight-paragraph: 450;
+  --font-weight-regular: 450;
+  --font-weight-medium: 650;
+  --font-weight-bold: 650;
 
   /* Repeated dimensions */
   --size-1: 1px;
