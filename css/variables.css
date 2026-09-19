@@ -1,12 +1,17 @@
 :root {
   /* Colors */
   --ink: #282a2d;
-  --muted: #62656a;
+  --muted: #37466b;
   --line: #e7e7e8;
   --surface: #f7f7f5;
   --surface-hover: #eeeeeb;
   --traficar: #7014ad;
-  --readme: #2361e9;
+  --readme-brand: #2361e9;
+  --readme: var(--readme-brand);
+  --readme-paragraph: #37466b;
+  --readme-surface: #f8f9ff;
+  --readme-surface-strong: #edf2ff;
+  --readme-border: #e4e6f5;
   --project-navigation: #080c13;
   --project-navigation-hover: #ffffff;
   --white: #ffffff;
@@ -23,10 +28,22 @@
 
   /* Typography */
   --font-family-sans: "Inter", system-ui, sans-serif;
+  --font-family-readme: "Work Sans", system-ui, sans-serif;
   --font-weight-paragraph: 450;
   --font-weight-regular: 450;
   --font-weight-medium: 650;
   --font-weight-bold: 650;
+  --font-weight-readme-regular: 400;
+  --font-weight-readme-semibold: 600;
+  --readme-heading-l-size: 30px;
+  --readme-heading-m-size: 22px;
+  --readme-heading-s-size: 18px;
+  --readme-text-m-size: 16px;
+  --readme-text-s-size: 14px;
+  --readme-text-xs-size: 12px;
+  --readme-heading-line-height: normal;
+  --readme-text-line-height: 1.5;
+  --readme-text-xs-line-height: 1.4;
 
   /* Repeated dimensions */
   --size-1: 1px;
