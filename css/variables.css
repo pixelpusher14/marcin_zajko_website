@@ -16,8 +16,8 @@
   --project-navigation-hover: #ffffff;
   --white: #ffffff;
   --black: #000000;
-  --scrollbar-track: #1b1c1e;
-  --scrollbar-thumb-hover: #85888d;
+  --scrollbar-track: #f4f4f4;
+  --scrollbar-thumb: #a0a0a5;
   --label: #76767f;
   --footer-text: #a1a4aa;
   --header-background: rgba(255, 255, 255, 0.96);
@@ -46,7 +46,7 @@
   --readme-text-xs-line-height: 1.4;
 
   /* Repeated dimensions */
-  --size-1: 1px;
+  --size-1: 1.2px;
   --size-3: 3px;
   --size-4: 4px;
   --size-12: 12px;
