@@ -39,37 +39,3 @@ if (caseStudyPage) {
     revealItems.forEach((item) => item.classList.add("is-visible"));
   }
 }
-
-const projectCards = document.querySelectorAll(".project-card");
-const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-projectCards.forEach((card) => {
-  if (reduceMotion) {
-    return;
-  }
-
-  const mockup = card.querySelector(".project-card__mockup");
-  const background = card.querySelector(".project-card__background");
-
-  if (!mockup || !background) {
-    return;
-  }
-
-  card.addEventListener("pointermove", (event) => {
-    if (event.pointerType === "touch") {
-      return;
-    }
-
-    const bounds = card.getBoundingClientRect();
-    const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 2;
-    const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 2;
-
-    mockup.style.setProperty("--card-mockup-x", `${x * 8}px`);
-    mockup.style.setProperty("--card-mockup-y", `${y * 6}px`);
-  });
-
-  card.addEventListener("pointerleave", () => {
-    mockup.style.setProperty("--card-mockup-x", "0px");
-    mockup.style.setProperty("--card-mockup-y", "0px");
-  });
-});
