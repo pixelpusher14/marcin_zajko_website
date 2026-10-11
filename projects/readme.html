@@ -26,20 +26,27 @@
   <header class="site-header">
     <a class="site-logo" href="../index.html">Marcin Zajko</a>
 
-    <nav class="site-navigation" aria-label="Main navigation">
+    <button class="site-navigation-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation">
+      <span aria-hidden="true"></span>
+    </button>
+
+    <nav class="site-navigation" id="primary-navigation" aria-label="Main navigation">
       <ul>
         <li>
           <a href="https://www.linkedin.com/in/marcin-zajko-0b20991ba/" target="_blank" rel="noopener">
+            <span class="site-navigation__icon site-navigation__icon--external" aria-hidden="true"></span>
             LinkedIn
           </a>
         </li>
         <li>
-          <a href="https://docs.google.com/document/d/1-LrXBCW5xbK3BPYhw3MSlrvgM96LC8O4StzEQayXYkE/edit?tab=t.0" target="_blank" rel="noopener">
+          <a href="../resume.html">
             Resumé
           </a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact">
+            Contact
+          </a>
         </li>
       </ul>
     </nav>
@@ -567,8 +574,8 @@
       </p>
 
       <p>
-        If you are planning a new project or want to improve an existing one,
-        feel free to contact me at:
+        Whether you have a question or just want to connect,
+        feel free to reach out at:
       </p>
 
       <a href="mailto:marcin.zajko97@gmail.com">

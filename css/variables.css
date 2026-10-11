@@ -20,17 +20,21 @@
   --scrollbar-thumb: #a0a0a5;
   --label: #76767f;
   --footer-text: #a1a4aa;
-  --header-background: rgba(255, 255, 255, 0.96);
+  --header-background: #ffffff;
   --text-on-color-muted: rgba(255, 255, 255, 0.78);
   --line-on-color: rgba(234, 234, 235, 0.2);
   --text-on-color: #eaeaeb;
   --project-card-meta: rgba(255, 255, 255, 0.5);
+  --resume-tag-background: #eaeaeb;
+  --resume-tag-text: #424448;
+  --resume-more-hover: #080c13;
 
   /* Typography */
   --font-family-sans: "Inter", system-ui, sans-serif;
   --font-family-readme: "Work Sans", system-ui, sans-serif;
   --font-weight-paragraph: 450;
   --font-weight-regular: 450;
+  --font-weight-semibold: 550;
   --font-weight-medium: 650;
   --font-weight-bold: 650;
   --font-weight-readme-regular: 400;
@@ -59,6 +63,9 @@
   --size-32: 32px;
   --size-40: 40px;
   --size-48: 48px;
+  --size-52: 52px;
+  --size-54: 54px;
+  --size-56: 56px;
   --size-64: 64px;
   --size-96: 96px;
   --size-112: 112px;
