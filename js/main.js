@@ -276,3 +276,94 @@ experienceButtons.forEach((button) => {
     }
   });
 });
+
+const resumeNavigationLinks = document.querySelectorAll(
+  ".resume-navigation__link"
+);
+const resumeNavigation = document.querySelector(".resume-navigation");
+const resumeSections = document.querySelectorAll(".resume-section[id]");
+
+if (resumeNavigation && resumeNavigationLinks.length && resumeSections.length) {
+  const setActiveResumeSection = (sectionId) => {
+    resumeNavigationLinks.forEach((link) => {
+      const isActive = link.getAttribute("href") === `#${sectionId}`;
+
+      link.classList.toggle("is-active", isActive);
+
+      if (isActive) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  let resumeNavigationFrame = null;
+
+  const updateActiveResumeSection = () => {
+    resumeNavigationFrame = null;
+    let activeSection = resumeSections[0];
+
+    resumeSections.forEach((section, index) => {
+      const matchingLink = resumeNavigationLinks[index];
+
+      if (
+        matchingLink &&
+        section.getBoundingClientRect().top <=
+          matchingLink.getBoundingClientRect().top + 1
+      ) {
+        activeSection = section;
+      }
+    });
+
+    setActiveResumeSection(activeSection.id);
+  };
+
+  const scheduleResumeNavigationUpdate = () => {
+    if (resumeNavigationFrame === null) {
+      resumeNavigationFrame = requestAnimationFrame(updateActiveResumeSection);
+    }
+  };
+
+  resumeNavigationLinks.forEach((link, index) => {
+    link.addEventListener("click", (event) => {
+      const target = document.querySelector(link.getAttribute("href"));
+
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
+
+      const navigationStyles = getComputedStyle(resumeNavigation);
+      const targetDocumentTop =
+        window.scrollY + target.getBoundingClientRect().top;
+      const isScrollingUp = targetDocumentTop < window.scrollY;
+      const navigationTopProperty = isScrollingUp
+        ? "--resume-navigation-top-with-header"
+        : "--resume-navigation-top";
+      const navigationTop =
+        Number.parseFloat(
+          navigationStyles.getPropertyValue(navigationTopProperty)
+        ) || 0;
+      const linkOffset = link.offsetTop;
+      const targetScrollTop = Math.max(
+        0,
+        targetDocumentTop - navigationTop - linkOffset
+      );
+
+      window.scrollTo({ top: targetScrollTop, behavior: "smooth" });
+    });
+  });
+
+  window.addEventListener("scroll", scheduleResumeNavigationUpdate, {
+    passive: true,
+  });
+  window.addEventListener("resize", scheduleResumeNavigationUpdate);
+  resumeNavigation.addEventListener("transitionend", (event) => {
+    if (event.propertyName === "top") {
+      scheduleResumeNavigationUpdate();
+    }
+  });
+  updateActiveResumeSection();
+}

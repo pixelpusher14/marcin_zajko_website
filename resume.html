@@ -51,23 +51,46 @@
   </header>
 
   <main>
-    <section class="resume" aria-labelledby="experience-heading">
-      <div class="resume__experience">
-        <h1 class="resume__section-title" id="experience-heading">Experience</h1>
+    <section class="resume" aria-label="Professional resume">
+      <nav class="resume-navigation" aria-label="Resume sections">
+        <a class="resume-navigation__link resume-navigation__link--experience is-active" href="#experience" aria-current="location">Experience</a>
+        <a class="resume-navigation__link resume-navigation__link--education" href="#education">Education</a>
+        <a class="resume-navigation__link resume-navigation__link--skills" href="#skills">Skills</a>
+        <a class="resume-navigation__link resume-navigation__link--tools" href="#tools">Tools</a>
+        <a class="resume-navigation__link resume-navigation__link--languages" href="#languages">Languages</a>
+      </nav>
 
-        <ol class="experience-list">
+      <div class="resume__content">
+        <section class="resume-section" id="experience" aria-labelledby="experience-heading">
+          <h1 class="resume__section-title" id="experience-heading">Experience</h1>
+
+          <ol class="experience-list">
+            <li class="experience-item">
+              <button class="experience-item__summary" type="button" aria-expanded="true" aria-controls="experience-gamefound">
+                <span class="experience-item__date">2025 – Now</span>
+                <span class="experience-item__heading">
+                  <span class="experience-item__title">UX/UI Designer</span>
+                  <span class="experience-item__meta">Gamefound · Product Company</span>
+                </span>
+                <span class="experience-item__toggle-icon" aria-hidden="true"></span>
+              </button>
+              <div class="experience-item__panel" id="experience-gamefound">
+                <div class="experience-item__panel-content">
+                  <ul>
+                    <li>Creating user flows, wireframes, high-fidelity designs, and interactive prototypes based on user needs and business requirements.</li>
+                    <li>Analyzing user behavior, identifying usability issues, and proposing solutions to improve user experience and conversion rates.</li>
+                    <li>Collaborating closely with product owners, developers, and stakeholders to define requirements and deliver effective solutions.</li>
+                    <li>Presenting design concepts, explaining design decisions, and recommending improvements based on user and business needs.</li>
+                  </ul>
+                </div>
+              </div>
+            </li>
           <li class="experience-item">
             <button class="experience-item__summary" type="button" aria-expanded="false" aria-controls="experience-corelogic">
-              <img class="experience-item__logo" src="assets/images/resume/logo_corelogic.png" alt="" width="54" height="54" aria-hidden="true">
+              <span class="experience-item__date">2022 – 2025</span>
               <span class="experience-item__heading">
                 <span class="experience-item__title">UX/UI Designer</span>
-                <span class="experience-item__meta">
-                  <span>Core Logic ·</span>
-                  <span>Software House ·</span>
-                  <span>May 2022 –</span>
-                  <span>Oct. 2025 ·</span>
-                  <span>3 y. 6 mo.</span>
-                </span>
+                <span class="experience-item__meta">Core Logic · Software House</span>
               </span>
               <span class="experience-item__toggle-icon" aria-hidden="true"></span>
             </button>
@@ -86,16 +109,10 @@
           </li>
           <li class="experience-item">
             <button class="experience-item__summary" type="button" aria-expanded="false" aria-controls="experience-wenet">
-              <img class="experience-item__logo" src="assets/images/resume/logo_wenet.png" alt="" width="54" height="54" aria-hidden="true">
+              <span class="experience-item__date">2021 – 2022</span>
               <span class="experience-item__heading">
                 <span class="experience-item__title">Web Designer</span>
-                <span class="experience-item__meta">
-                  <span>WeNet ·</span>
-                  <span>Interactive Agency ·</span>
-                  <span>Apr. 2021 –</span>
-                  <span>Apr. 2022 ·</span>
-                  <span>1 y. 1 mo.</span>
-                </span>
+                <span class="experience-item__meta">WeNet · Interactive Agency</span>
               </span>
               <span class="experience-item__toggle-icon" aria-hidden="true"></span>
             </button>
@@ -111,15 +128,10 @@
           </li>
           <li class="experience-item">
             <button class="experience-item__summary" type="button" aria-expanded="false" aria-controls="experience-graphic">
-              <img class="experience-item__logo" src="assets/images/resume/logo_freelance.png" alt="" width="54" height="54" aria-hidden="true">
+              <span class="experience-item__date">2019 – 2021</span>
               <span class="experience-item__heading">
                 <span class="experience-item__title">Graphic Designer</span>
-                <span class="experience-item__meta">
-                  <span>Freelancer ·</span>
-                  <span>Dec. 2019 –</span>
-                  <span>Mar. 2021 ·</span>
-                  <span>1 y. 4 mo.</span>
-                </span>
+                <span class="experience-item__meta">Freelancer</span>
               </span>
               <span class="experience-item__toggle-icon" aria-hidden="true"></span>
             </button>
@@ -136,16 +148,10 @@
           </li>
           <li class="experience-item">
             <button class="experience-item__summary" type="button" aria-expanded="false" aria-controls="experience-wordpress">
-              <img class="experience-item__logo" src="assets/images/resume/logo_atwi.png" alt="" width="54" height="54" aria-hidden="true">
+              <span class="experience-item__date">2019 – 2020</span>
               <span class="experience-item__heading">
                 <span class="experience-item__title">Wordpress Developer</span>
-                <span class="experience-item__meta">
-                  <span>Atwi ·</span>
-                  <span>Interactive Agency ·</span>
-                  <span>Sep. 2019 –</span>
-                  <span>Feb. 2020 ·</span>
-                  <span>6 mo.</span>
-                </span>
+                <span class="experience-item__meta">Atwi · Interactive Agency</span>
               </span>
               <span class="experience-item__toggle-icon" aria-hidden="true"></span>
             </button>
@@ -159,124 +165,56 @@
               </div>
             </div>
           </li>
-          <li class="experience-item">
-            <button class="experience-item__summary" type="button" aria-expanded="false" aria-controls="experience-artist">
-              <img class="experience-item__logo" src="assets/images/resume/logo_freelance.png" alt="" width="54" height="54" aria-hidden="true">
-              <span class="experience-item__heading">
-                <span class="experience-item__title">2D Artist</span>
-                <span class="experience-item__meta">
-                  <span>Freelancer ·</span>
-                  <span>Oct. 2017 –</span>
-                  <span>Sep. 2019 ·</span>
-                  <span>2 y.</span>
-                </span>
-              </span>
-              <span class="experience-item__toggle-icon" aria-hidden="true"></span>
-            </button>
-            <div class="experience-item__panel" id="experience-artist" hidden>
-              <div class="experience-item__panel-content">
-                <ul>
-                  <li>Creating 2D illustrations and visual assets from initial concepts to final artwork.</li>
-                  <li>Working directly with clients to understand project requirements and creative direction.</li>
-                  <li>Presenting concepts, collecting feedback, and refining artwork throughout the creative process.</li>
-                </ul>
-                <p><span>Clients:</span> PARRO Super rockets, Bajkowa.TV and more</p>
-              </div>
-            </div>
-          </li>
-        </ol>
+          </ol>
+        </section>
+
+        <section class="resume-section" id="education" aria-labelledby="education-heading">
+          <h2 class="resume__section-title" id="education-heading">Education</h2>
+          <ol class="education-list">
+            <li><span>2018 – 2019</span><p><strong>Art &amp; Design, Erasmus</strong>Instituto Politécnico do Porto</p></li>
+            <li><span>2017 – 2020</span><p><strong>Design, Bachelor's degree</strong>Bialystok University of Technology</p></li>
+          </ol>
+        </section>
+
+        <section class="resume-section" id="skills" aria-labelledby="skills-heading">
+          <h2 class="resume__section-title" id="skills-heading">Skills</h2>
+          <ul class="tag-list">
+            <li>UX/UI</li><li>User Flows</li><li>Journey Mapping</li><li>Information Architecture</li>
+            <li>Design Systems</li><li>Multi-Platform Design</li><li>AI-Assisted Design</li><li>Visual Design</li>
+            <li>Interaction Design</li><li>Vibe Coding</li><li>Prototyping</li><li>Usability Testing</li>
+            <li>UX Writing</li><li>User Research</li><li>Analytics</li><li>Accessibility</li>
+          </ul>
+        </section>
+
+        <section class="resume-section" id="tools" aria-labelledby="tools-heading">
+          <h2 class="resume__section-title" id="tools-heading">Tools</h2>
+          <ul class="tag-list tag-list--icons">
+            <li><img src="assets/pages/resume/figma_img.png" alt="" width="20" height="20">Figma</li>
+            <li><img src="assets/pages/resume/claude_img.png" alt="" width="20" height="20">Claude Design</li>
+            <li><img src="assets/pages/resume/notion_img.png" alt="" width="20" height="20">Notion</li>
+            <li><img src="assets/pages/resume/miro_img.png" alt="" width="20" height="20">Miro</li>
+            <li><img src="assets/pages/resume/hotjar_img.png" alt="" width="20" height="20">HotJar</li>
+            <li><img src="assets/pages/resume/photoshop_img.png" alt="" width="20" height="20">Photoshop</li>
+            <li><img src="assets/pages/resume/illustrator_img.png" alt="" width="20" height="20">Illustrator</li>
+            <li><img src="assets/pages/resume/vscode_img.png" alt="" width="20" height="20">VS Code</li>
+            <li><img src="assets/pages/resume/wordpress_img.png" alt="" width="20" height="20">WordPress</li>
+          </ul>
+        </section>
+
+        <section class="resume-section" id="languages" aria-labelledby="languages-heading">
+          <h2 class="resume__section-title" id="languages-heading">Languages</h2>
+          <ul class="tag-list tag-list--icons">
+            <li><img src="assets/pages/resume/pl_img.png" alt="" width="20" height="20">Polish · Native</li>
+            <li><img src="assets/pages/resume/eng_img.png" alt="" width="20" height="20">English · C2</li>
+            <li><img src="assets/pages/resume/es_img.png" alt="" width="20" height="20">Spanish · A2</li>
+          </ul>
+        </section>
       </div>
-
-      <aside class="resume__sidebar" aria-label="Professional details">
-        <section>
-          <h2 class="resume__section-title">Skills</h2>
-
-          <div class="resume__skill-group">
-            <h3>Product Design</h3>
-            <ul class="tag-list">
-              <li>UX/UI</li>
-              <li>Interaction Design</li>
-              <li>User Flows</li>
-              <li id="product-design-more-1" hidden>Journey Mapping</li>
-              <li id="product-design-more-2" hidden>Multi-Platform Design</li>
-              <li class="tag-list__more">
-                <button
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="product-design-more-1 product-design-more-2"
-                >+2 more</button>
-              </li>
-            </ul>
-          </div>
-
-          <div class="resume__skill-group">
-            <h3>Craft &amp; Systems</h3>
-            <ul class="tag-list">
-              <li>Prototyping</li>
-              <li>Visual Design</li>
-              <li>UX Writing</li>
-              <li id="craft-systems-more-1" hidden>Accessibility</li>
-              <li id="craft-systems-more-2" hidden>Information Architecture</li>
-              <li id="craft-systems-more-3" hidden>Design Systems</li>
-              <li id="craft-systems-more-4" hidden>AI-Assisted Design</li>
-              <li class="tag-list__more">
-                <button
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="craft-systems-more-1 craft-systems-more-2 craft-systems-more-3 craft-systems-more-4"
-                >+4 more</button>
-              </li>
-            </ul>
-          </div>
-
-          <div class="resume__skill-group">
-            <h3>Research</h3>
-            <ul class="tag-list">
-              <li>User Research</li>
-              <li>Desk Research</li>
-              <li>Usability Testing</li>
-              <li id="research-more-1" hidden>A/B Testing</li>
-              <li class="tag-list__more">
-                <button
-                  type="button"
-                  aria-expanded="false"
-                  aria-controls="research-more-1"
-                >+1 more</button>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section>
-          <h2 class="resume__section-title">Education</h2>
-          <p>Design, Bachelor's degree,<br>Bialystok University of Technology,<br>2017 – 2020</p>
-          <p>Art &amp; Design, Erasmus+,<br>Instituto Politécnico do Porto,<br>2018 – 2019</p>
-        </section>
-
-        <section>
-          <h2 class="resume__section-title">Tools</h2>
-          <ul class="tag-list">
-            <li>Figma</li>
-            <li>Claude Design</li>
-            <li>Miro</li>
-            <li>Notion</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 class="resume__section-title">Languages</h2>
-          <ul class="tag-list">
-            <li>Polish · Native</li>
-            <li>English · C2</li>
-            <li>Spanish · A2</li>
-          </ul>
-        </section>
-      </aside>
     </section>
 
     <figure class="resume-image">
       <img
-        src="assets/images/resume/img_resume.png"
+        src="assets/pages/resume/img_resume.png"
         alt="Designer workspace with a tablet and laptop"
         width="1920"
         height="520"
