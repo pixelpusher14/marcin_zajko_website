@@ -2884,6 +2884,7 @@ a:focus-visible {
 }
 
 .experience-item__toggle-icon {
+  align-self: center;
   width: var(--size-20);
   height: var(--size-20);
   color: var(--resume-icon);
@@ -3058,6 +3059,32 @@ a:focus-visible {
   }
 }
 
+/* Resume scroll reveal */
+
+.resume-page.resume-reveal-ready .resume-reveal {
+  opacity: 0;
+  transform: translateY(var(--size-24));
+  transition:
+    opacity 450ms ease,
+    transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.resume-page.resume-reveal-ready .resume-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.resume-page.resume-reveal-ready .resume-navigation.resume-reveal {
+  transition:
+    top 250ms ease-in-out,
+    opacity 450ms ease 50ms,
+    transform 500ms cubic-bezier(0.2, 0.7, 0.2, 1) 50ms;
+}
+
+.resume-page.resume-reveal-ready #experience.resume-reveal {
+  transition-delay: 150ms;
+}
+
 /* Case study scroll reveal */
 
 .case-study-page--readme.scrolly-ready .scrolly-reveal,
@@ -3100,6 +3127,12 @@ a:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .resume-page.resume-reveal-ready .resume-reveal {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0ms;
+  }
+
   .case-study-page--readme.scrolly-ready .scrolly-reveal,
   .case-study-page--traficar.scrolly-ready .scrolly-reveal {
     opacity: 1;

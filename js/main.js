@@ -347,10 +347,9 @@ if (resumeNavigation && resumeNavigationLinks.length && resumeSections.length) {
           navigationStyles.getPropertyValue(navigationTopProperty)
         ) || 0;
       const linkOffset = link.offsetTop;
-      const targetScrollTop = Math.max(
-        0,
-        targetDocumentTop - navigationTop - linkOffset
-      );
+      const targetScrollTop = index === 0
+        ? 0
+        : Math.max(0, targetDocumentTop - navigationTop - linkOffset);
 
       window.scrollTo({ top: targetScrollTop, behavior: "smooth" });
     });
@@ -366,4 +365,35 @@ if (resumeNavigation && resumeNavigationLinks.length && resumeSections.length) {
     }
   });
   updateActiveResumeSection();
+}
+
+const resumePage = document.querySelector(".resume-page");
+
+if (resumePage) {
+  const resumeRevealItems = document.querySelectorAll(
+    ".resume-navigation, .resume-section, .resume-image, .contact"
+  );
+
+  resumePage.classList.add("resume-reveal-ready");
+  resumeRevealItems.forEach((item) => item.classList.add("resume-reveal"));
+
+  if ("IntersectionObserver" in window) {
+    const resumeRevealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            resumeRevealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -8%", threshold: 0.1 }
+    );
+
+    requestAnimationFrame(() => {
+      resumeRevealItems.forEach((item) => resumeRevealObserver.observe(item));
+    });
+  } else {
+    resumeRevealItems.forEach((item) => item.classList.add("is-visible"));
+  }
 }
