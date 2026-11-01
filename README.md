@@ -1,11 +1,11 @@
 # Marcin Zajko — Portfolio
 
-Statyczne portfolio UI/UX Designera zbudowane w HTML i CSS. Strona główna przedstawia autora i wybrane realizacje, a katalog `projects/` zawiera case studies projektów Traficar i ReadMe.
+Statyczne portfolio UI/UX Designera zbudowane w HTML i CSS. Strona główna przedstawia autora i wybrane realizacje, a katalog `pages/` zawiera case studies projektów Traficar i ReadMe oraz CV.
 
 ## Struktura
 
 - `index.html` — strona główna.
-- `projects/` — podstrony projektów.
+- `pages/` — podstrony projektów oraz CV.
 - `css/styles.css` — główny arkusz CSS.
 - `css/reset.css` — reset stylów przeglądarki.
 - `css/font.css` — lokalna definicja Inter Variable.
