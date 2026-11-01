@@ -4,15 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S32XWZMTFK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { window.dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-S32XWZMTFK');
-  </script>
-
   <meta
     name="description"
     content="Marcin Zajko | UX/UI Designer"
@@ -34,6 +25,8 @@
     crossorigin
   >
   <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" defer></script>
+  <script src="js/analytics.js" defer></script>
 </head>
 
 <body>
@@ -228,6 +221,13 @@
     <p>© 2026, Marcin Zajko</p>
   </footer>
 
+  <aside class="analytics-consent" id="analytics-consent" aria-label="Analytics consent" hidden>
+    <p>This site uses optional analytics to understand visits and improve the portfolio.</p>
+    <div class="analytics-consent__actions">
+      <button type="button" data-analytics-consent="accept">Accept analytics</button>
+      <button type="button" data-analytics-consent="reject">Reject</button>
+    </div>
+  </aside>
   <script src="js/main.js" defer></script>
 </body>
 </html>

@@ -3415,3 +3415,66 @@ a:focus-visible {
   }
 
 }
+.analytics-consent {
+  position: fixed;
+  z-index: 1000;
+  right: 24px;
+  bottom: 24px;
+  display: flex;
+  width: min(560px, calc(100vw - 32px));
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 16%);
+  color: var(--ink);
+}
+
+.analytics-consent[hidden] {
+  display: none;
+}
+
+.analytics-consent p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.analytics-consent__actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.analytics-consent__actions button {
+  padding: 9px 12px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+}
+
+.analytics-consent__actions button:first-child {
+  background: var(--ink);
+  color: var(--white);
+}
+
+@media (max-width: 560px) {
+  .analytics-consent {
+    right: 16px;
+    bottom: 16px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .analytics-consent__actions {
+    justify-content: flex-end;
+  }
+}
