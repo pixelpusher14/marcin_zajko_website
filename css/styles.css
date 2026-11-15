@@ -515,6 +515,57 @@ a:focus-visible {
   margin-bottom: var(--size-4);
 }
 
+.experience-item__website {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-width: 144px;
+  height: 38px;
+  padding: 0 48px;
+  margin-top: var(--size-32);
+  border: 1px solid #dee1e7;
+  border-radius: var(--size-4);
+  color: var(--resume-heading);
+  font-size: var(--size-14);
+  line-height: 1;
+  text-decoration: none;
+  transition: border-color 180ms ease-in-out;
+}
+
+.experience-item__website .site-navigation__icon {
+  position: static;
+  flex: 0 0 0;
+  width: var(--size-16);
+  height: var(--size-16);
+  margin-right: -12px;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition:
+    flex-basis 200ms ease,
+    opacity 200ms ease,
+    transform 200ms ease,
+    margin-right 200ms ease;
+}
+
+.experience-item__website:hover .site-navigation__icon,
+.experience-item__website:focus-visible .site-navigation__icon {
+  flex-basis: var(--size-16);
+  margin-right: 0;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.experience-item__website:hover,
+.experience-item__website:focus-visible {
+  border-color: #bbc1d0;
+}
+
+.experience-item__website:focus-visible {
+  outline: 2px solid var(--resume-muted);
+  outline-offset: 2px;
+}
+
 .resume__sidebar {
   display: flex;
   flex-direction: column;

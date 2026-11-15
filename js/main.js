@@ -534,7 +534,7 @@ const resumePage = document.querySelector(".resume-page");
 
 if (resumePage) {
   const resumeRevealItems = document.querySelectorAll(
-    ".resume-navigation, .resume-section, .resume-image, .contact"
+    ".resume-navigation, #skills, #tools, #languages, .resume-image, .contact"
   );
 
   resumePage.classList.add("resume-reveal-ready");
