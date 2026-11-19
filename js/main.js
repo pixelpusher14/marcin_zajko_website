@@ -426,12 +426,6 @@ experienceButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const isExpanded = button.getAttribute("aria-expanded") === "true";
 
-    experienceButtons.forEach((otherButton) => {
-      if (otherButton !== button) {
-        closeExperiencePanel(otherButton);
-      }
-    });
-
     if (isExpanded) {
       closeExperiencePanel(button);
     } else {
