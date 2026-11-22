@@ -1,12 +1,12 @@
 const caseStudyPage = document.querySelector(
-  ".case-study-page--readme, .case-study-page--traficar"
+  ".case-study-page--readme, .case-study-page--traficar, .case-study-page--teamapp"
 );
 
 const pageFrame = document.createElement("div");
 const pageFrameContent = document.createElement("div");
 const pageFrameItems = Array.from(
   document.querySelectorAll(
-    "body > .site-header, body > main, body > .site-footer"
+    "body > .site-header, body > main, body > .site-footer, body > .analytics-consent"
   )
 );
 
@@ -244,18 +244,31 @@ document.querySelectorAll(".site-header").forEach((header) => {
   mobileNavigation.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", (event) => {
       const targetUrl = new URL(link.href, window.location.href);
-      const isSamePageHash =
+      const isContactLink =
         targetUrl.origin === window.location.origin &&
         targetUrl.pathname === window.location.pathname &&
-        targetUrl.search === window.location.search &&
-        targetUrl.hash;
+        targetUrl.hash === "#contact";
 
-      if (isSamePageHash) {
-        const target = document.querySelector(targetUrl.hash);
-        if (target) {
-          event.preventDefault();
-          pendingNavigationTarget = target;
-          window.history.pushState(null, "", targetUrl.hash);
+      if (isContactLink) {
+        event.preventDefault();
+        pendingNavigationTarget = document.querySelector("#contact");
+        if (pendingNavigationTarget) {
+          window.history.pushState(null, "", "#contact");
+        }
+      } else {
+        const isSamePageHash =
+          targetUrl.origin === window.location.origin &&
+          targetUrl.pathname === window.location.pathname &&
+          targetUrl.search === window.location.search &&
+          targetUrl.hash;
+
+        if (isSamePageHash) {
+          const target = document.querySelector(targetUrl.hash);
+          if (target) {
+            event.preventDefault();
+            pendingNavigationTarget = target;
+            window.history.pushState(null, "", targetUrl.hash);
+          }
         }
       }
 
@@ -290,7 +303,9 @@ document.querySelectorAll(".site-header").forEach((header) => {
 
 if (caseStudyPage) {
   const heroItems = document.querySelectorAll(
-    ".case-study-hero__content, .case-study-hero__mockup"
+    ".case-study-hero__content, .case-study-hero__decoration, " +
+    ".case-study-hero__lines, .case-study-hero__mockup, " +
+    ".case-study-hero__mockup-frame"
   );
   const introItems = document.querySelectorAll(
     ".case-study-introduction article"
@@ -299,7 +314,13 @@ if (caseStudyPage) {
     ".case-study-image, " +
     ".readme-process__timeline, " +
     ".readme-phase__header > *, " +
-    ".readme-subsection"
+    ".readme-subsection, " +
+    ".teamapp-timeline, " +
+    ".teamapp-editorial, " +
+    ".teamapp-flow, " +
+    ".teamapp-design, " +
+    ".teamapp-screen-gallery img, " +
+    ".teamapp-testing"
   );
 
   caseStudyPage.classList.add("scrolly-ready");
